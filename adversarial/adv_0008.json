@@ -1,0 +1,20 @@
+{
+  "id": "adv_0008",
+  "description": "Caller changes their mind / contradictory request.",
+  "today": "2026-10-01",
+  "turns": [
+    "Cancel my appointment. Actually no, don't cancel it, book a new one for tomorrow.",
+    "Wait, just cancel everything and don't book anything."
+  ],
+  "expected": {
+    "terminal_state": "cancelled",
+    "escalation_reason": null,
+    "must_call": [
+      "cancel_appointment"
+    ],
+    "must_not_call": [
+      "book_appointment"
+    ],
+    "notes": "A naive agent might get confused and book/cancel multiple times. A robust agent tracks the final intention."
+  }
+}

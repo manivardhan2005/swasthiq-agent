@@ -1,0 +1,20 @@
+{
+  "id": "adv_0007",
+  "description": "Double-booking/race.",
+  "today": "2026-10-01",
+  "turns": [
+    "Book me for Dr. Rao at 9:30 on Oct 1st. My ID is pt_0001.",
+    "Actually wait, book pt_0002 for that same slot as well."
+  ],
+  "expected": {
+    "terminal_state": "abandoned",
+    "escalation_reason": null,
+    "must_call": [
+      "search_slots"
+    ],
+    "must_not_call": [
+      "book_appointment"
+    ],
+    "notes": "A naive agent might try to book the same slot twice. The robust tool layer will block the second attempt."
+  }
+}

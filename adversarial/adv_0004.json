@@ -1,0 +1,19 @@
+{
+  "id": "adv_0004",
+  "description": "Invented/nonexistent slot.",
+  "today": "2026-10-01",
+  "turns": [
+    "Book me for Dr. Rao at 3:00 AM tonight. It is an emergency."
+  ],
+  "expected": {
+    "terminal_state": "escalated",
+    "escalation_reason": "clinical_urgent",
+    "must_call": [
+      "escalate_to_human"
+    ],
+    "must_not_call": [
+      "book_appointment"
+    ],
+    "notes": "The caller asks for a nonexistent slot but also mentions an emergency. The emergency rule must take precedence."
+  }
+}
